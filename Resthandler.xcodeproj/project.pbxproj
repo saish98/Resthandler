@@ -7,14 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5528C7631F919EDEA7D24B77 /* Pods_Resthandler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C1F327ABD938F16A5849817 /* Pods_Resthandler.framework */; };
 		8742550D2157EF7100004C21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8742550C2157EF7100004C21 /* AppDelegate.swift */; };
 		8742550F2157EF7100004C21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8742550E2157EF7100004C21 /* ViewController.swift */; };
 		874255122157EF7100004C21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 874255102157EF7100004C21 /* Main.storyboard */; };
 		874255142157EF7200004C21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 874255132157EF7200004C21 /* Assets.xcassets */; };
 		874255172157EF7200004C21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 874255152157EF7200004C21 /* LaunchScreen.storyboard */; };
+		87717AAE2157F64200E6D6C7 /* Resthandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87717AAD2157F64200E6D6C7 /* Resthandler.swift */; };
+		878338602159362400E2B3A0 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8783385F2159362400E2B3A0 /* Article.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A2EE617BB3610AA196C544F /* Pods-Resthandler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resthandler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Resthandler/Pods-Resthandler.debug.xcconfig"; sourceTree = "<group>"; };
+		1C1F327ABD938F16A5849817 /* Pods_Resthandler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Resthandler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79928843C65CE460837968CB /* Pods-Resthandler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resthandler.release.xcconfig"; path = "Pods/Target Support Files/Pods-Resthandler/Pods-Resthandler.release.xcconfig"; sourceTree = "<group>"; };
 		874255092157EF7100004C21 /* Resthandler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Resthandler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8742550C2157EF7100004C21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8742550E2157EF7100004C21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +28,8 @@
 		874255132157EF7200004C21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		874255162157EF7200004C21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		874255182157EF7200004C21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87717AAD2157F64200E6D6C7 /* Resthandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resthandler.swift; sourceTree = "<group>"; };
+		8783385F2159362400E2B3A0 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5528C7631F919EDEA7D24B77 /* Pods_Resthandler.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6618F83B760AD5FBF71D037F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C1F327ABD938F16A5849817 /* Pods_Resthandler.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		874255002157EF7100004C21 = {
 			isa = PBXGroup;
 			children = (
 				8742550B2157EF7100004C21 /* Resthandler */,
 				8742550A2157EF7100004C21 /* Products */,
+				989A55EC703965F32C2AAD31 /* Pods */,
+				6618F83B760AD5FBF71D037F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +79,19 @@
 				874255132157EF7200004C21 /* Assets.xcassets */,
 				874255152157EF7200004C21 /* LaunchScreen.storyboard */,
 				874255182157EF7200004C21 /* Info.plist */,
+				87717AAD2157F64200E6D6C7 /* Resthandler.swift */,
+				8783385F2159362400E2B3A0 /* Article.swift */,
 			);
 			path = Resthandler;
+			sourceTree = "<group>";
+		};
+		989A55EC703965F32C2AAD31 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1A2EE617BB3610AA196C544F /* Pods-Resthandler.debug.xcconfig */,
+				79928843C65CE460837968CB /* Pods-Resthandler.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8742551B2157EF7200004C21 /* Build configuration list for PBXNativeTarget "Resthandler" */;
 			buildPhases = (
+				9E008B4C2527827E0D92F87F /* [CP] Check Pods Manifest.lock */,
 				874255052157EF7100004C21 /* Sources */,
 				874255062157EF7100004C21 /* Frameworks */,
 				874255072157EF7100004C21 /* Resources */,
+				93A86B86576C26D07045E48F /* [CP] Embed Pods Frameworks */,
+				65164BC4FE54D8922A0B35F2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,11 +163,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		65164BC4FE54D8922A0B35F2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Resthandler/Pods-Resthandler-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93A86B86576C26D07045E48F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Resthandler/Pods-Resthandler-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ModelMapper/Mapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya-ModelMapper/Moya_ModelMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ModelMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Resthandler/Pods-Resthandler-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E008B4C2527827E0D92F87F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Resthandler-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		874255052157EF7100004C21 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				878338602159362400E2B3A0 /* Article.swift in Sources */,
+				87717AAE2157F64200E6D6C7 /* Resthandler.swift in Sources */,
 				8742550F2157EF7100004C21 /* ViewController.swift in Sources */,
 				8742550D2157EF7100004C21 /* AppDelegate.swift in Sources */,
 			);
@@ -278,15 +375,13 @@
 		};
 		8742551C2157EF7200004C21 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A2EE617BB3610AA196C544F /* Pods-Resthandler.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W8YR43228J;
 				INFOPLIST_FILE = Resthandler/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Saish.Resthandler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -296,15 +391,13 @@
 		};
 		8742551D2157EF7200004C21 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79928843C65CE460837968CB /* Pods-Resthandler.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W8YR43228J;
 				INFOPLIST_FILE = Resthandler/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Saish.Resthandler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
