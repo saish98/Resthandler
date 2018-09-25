@@ -20,14 +20,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func ButtonAction(_ sender: Any) {
-//        makeAPIcall()
-        makePostApiCall()
+        makeAPIcall()
+//        makePostApiCall()
 //        readJson()
     }
     
     func makeAPIcall() {
 
-        apiLogProvider.request(.zen) { result in
+        apiLogProvider.request(.getArticles) { result in
             
             switch result {
             case .success(let response):
@@ -46,7 +46,7 @@ class ViewController: UIViewController {
     
     func makePostApiCall() {
         
-        apiLogProvider.request(.createUser(name:"Sai", job:"Developer")) { result in
+        apiLogProvider.request(.create(name:"Sai", job:"Developer")) { result in
             
             switch result {
             case .success(let response):

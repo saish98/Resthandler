@@ -10,8 +10,11 @@ import Foundation
 import Moya
 
 public enum Resthandler {
-    case zen
-    case createUser(name: String, job: String)
+    case getArticles
+    case create(name: String, job: String)
+    case update
+    case delete(id:String)
+    case getUser(id:String)
 }
 
 //MARK: For debug purpose use this provider
@@ -36,19 +39,26 @@ extension Resthandler: TargetType {
    
     public var path: String {
         switch self {
-        case .zen:
+        case .getArticles:
             return "/getAllPosts"
-        case .createUser(_, _):
+        case .create(_, _):
             return "/api/users"
+            
+        default:
+            return ""
         }
     }
     
     public var method: Moya.Method {
         switch self {
-        case .zen:
+        case .getArticles,.getUser:
             return .get
-        case .createUser:
+        case .create:
             return .post
+        case .update:
+            return .put
+        case .delete:
+            return .delete
         }
     }
     
@@ -58,10 +68,12 @@ extension Resthandler: TargetType {
 
     public var task: Task {
         switch self {
-        case .zen:
+        case .getArticles:
             return .requestPlain
-        case let .createUser(name, job):
+        case let .create(name, job):
             return .requestParameters(parameters: ["name": name, "job": job], encoding: JSONEncoding.default)
+        default:
+            return .requestPlain
         }
     }
     
@@ -71,7 +83,7 @@ extension Resthandler: TargetType {
     
     public var validationType: ValidationType {
         switch self {
-        case .zen, .createUser:
+        case .getArticles, .create, .update, .delete, .getUser:
             return .successCodes
         }
     }
