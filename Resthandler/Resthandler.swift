@@ -11,6 +11,7 @@ import Moya
 
 public enum Resthandler {
     case zen
+    case createUser(name: String, job: String)
 }
 
 //MARK: For debug purpose use this provider
@@ -30,12 +31,15 @@ private func JSONResponseDataFormatter(_ data: Data) -> Data {
 
 extension Resthandler: TargetType {
     
-    public var baseURL: URL { return URL(string: "https://fierce-cove-29863.herokuapp.com")! }
+//    public var baseURL: URL { return URL(string: "https://fierce-cove-29863.herokuapp.com")! }
+    public var baseURL: URL { return URL(string: "https://reqres.in")! }
    
     public var path: String {
         switch self {
         case .zen:
             return "/getAllPosts"
+        case .createUser(_, _):
+            return "/api/users"
         }
     }
     
@@ -43,6 +47,8 @@ extension Resthandler: TargetType {
         switch self {
         case .zen:
             return .get
+        case .createUser:
+            return .post
         }
     }
     
@@ -54,6 +60,8 @@ extension Resthandler: TargetType {
         switch self {
         case .zen:
             return .requestPlain
+        case let .createUser(name, job):
+            return .requestParameters(parameters: ["name": name, "job": job], encoding: JSONEncoding.default)
         }
     }
     
@@ -63,7 +71,7 @@ extension Resthandler: TargetType {
     
     public var validationType: ValidationType {
         switch self {
-        case .zen:
+        case .zen, .createUser:
             return .successCodes
         }
     }

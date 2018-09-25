@@ -20,7 +20,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func ButtonAction(_ sender: Any) {
-        makeAPIcall()
+//        makeAPIcall()
+        makePostApiCall()
+//        readJson()
     }
     
     func makeAPIcall() {
@@ -38,6 +40,40 @@ class ViewController: UIViewController {
                 
             case .failure(let error):
                 print("Failure:\(error)")
+            }
+        }
+    }
+    
+    func makePostApiCall() {
+        
+        apiLogProvider.request(.createUser(name:"Sai", job:"Developer")) { result in
+            
+            switch result {
+            case .success(let response):
+                do {
+                    let repos = try response.map(to: User.self)
+                    self.textView.text = repos.debugDescription
+                } catch let error {
+                    print("There was something wrong with the request! Error: \(error)")
+                }
+               
+            case .failure(let error):
+                print("Failure:\(error)")
+            }
+        }
+    }
+    
+    func readJson() {
+        if let path = Bundle.main.path(forResource: "response", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+                
+                if let jsonResult = jsonResult as? Dictionary<String, AnyObject> {
+                    print(jsonResult)
+                }
+            } catch {
+                // handle error
             }
         }
     }
