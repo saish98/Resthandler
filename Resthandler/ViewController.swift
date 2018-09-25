@@ -20,8 +20,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func ButtonAction(_ sender: Any) {
-        makeAPIcall()
-//        makePostApiCall()
+//        makeAPIcall()
+        makePostApiCall()
 //        readJson()
     }
     
