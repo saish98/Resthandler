@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		5528C7631F919EDEA7D24B77 /* Pods_Resthandler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C1F327ABD938F16A5849817 /* Pods_Resthandler.framework */; };
 		873FE83221597E4300A19F9A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873FE83121597E4300A19F9A /* User.swift */; };
-		873FE8342159F20200A19F9A /* response.json in Resources */ = {isa = PBXBuildFile; fileRef = 873FE8332159F20200A19F9A /* response.json */; };
-		873FE8362159F3F200A19F9A /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873FE8352159F3F200A19F9A /* Person.swift */; };
 		8742550D2157EF7100004C21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8742550C2157EF7100004C21 /* AppDelegate.swift */; };
 		8742550F2157EF7100004C21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8742550E2157EF7100004C21 /* ViewController.swift */; };
 		874255122157EF7100004C21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 874255102157EF7100004C21 /* Main.storyboard */; };
@@ -25,8 +23,6 @@
 		1C1F327ABD938F16A5849817 /* Pods_Resthandler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Resthandler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79928843C65CE460837968CB /* Pods-Resthandler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resthandler.release.xcconfig"; path = "Pods/Target Support Files/Pods-Resthandler/Pods-Resthandler.release.xcconfig"; sourceTree = "<group>"; };
 		873FE83121597E4300A19F9A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		873FE8332159F20200A19F9A /* response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = response.json; sourceTree = "<group>"; };
-		873FE8352159F3F200A19F9A /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		874255092157EF7100004C21 /* Resthandler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Resthandler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8742550C2157EF7100004C21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8742550E2157EF7100004C21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,8 +84,6 @@
 				87717AAD2157F64200E6D6C7 /* Resthandler.swift */,
 				8783385F2159362400E2B3A0 /* Article.swift */,
 				873FE83121597E4300A19F9A /* User.swift */,
-				873FE8352159F3F200A19F9A /* Person.swift */,
-				873FE8332159F20200A19F9A /* response.json */,
 			);
 			path = Resthandler;
 			sourceTree = "<group>";
@@ -164,7 +158,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				873FE8342159F20200A19F9A /* response.json in Resources */,
 				874255172157EF7200004C21 /* LaunchScreen.storyboard in Resources */,
 				874255142157EF7200004C21 /* Assets.xcassets in Resources */,
 				874255122157EF7100004C21 /* Main.storyboard in Resources */,
@@ -244,7 +237,6 @@
 				87717AAE2157F64200E6D6C7 /* Resthandler.swift in Sources */,
 				8742550F2157EF7100004C21 /* ViewController.swift in Sources */,
 				873FE83221597E4300A19F9A /* User.swift in Sources */,
-				873FE8362159F3F200A19F9A /* Person.swift in Sources */,
 				8742550D2157EF7100004C21 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

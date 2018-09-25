@@ -9,13 +9,18 @@
 import Foundation
 import Mapper
 /*
- {
+ [{
  "id" : 1,
  "title" : "Post One",
  "thumbUrl" : "https:\/\/lh6.googleusercontent.com\/-55osAWw3x0Q\/URquUtcFr5I\/AAAAAAAAAbs\/rWlj1RUKrYI\/s240-c\/A%252520Photographer.jpg",
  "url" : "https:\/\/lh6.googleusercontent.com\/-55osAWw3x0Q\/URquUtcFr5I\/AAAAAAAAAbs\/rWlj1RUKrYI\/s1024\/A%252520Photographer.jpg"
  },
-
+ {
+ "id" : 2,
+ "title" : "Post Two",
+ "thumbUrl" : "https:\/\/lh6.googleusercontent.com\/-55osAWw3x0Q\/URquUtcFr5I\/AAAAAAAAAbs\/rWlj1RUKrYI\/s240-c\/A%252520Photographer.jpg",
+ "url" : "https:\/\/lh6.googleusercontent.com\/-55osAWw3x0Q\/URquUtcFr5I\/AAAAAAAAAbs\/rWlj1RUKrYI\/s1024\/A%252520Photographer.jpg"
+ }]
  */
 struct Article: Mappable {
     

@@ -12,9 +12,10 @@ import Moya
 public enum Resthandler {
     case getArticles
     case create(name: String, job: String)
-    case update
+    case update(id:String, name:String, job:String)
     case delete(id:String)
     case getUser(id:String)
+    case getUsers
 }
 
 //MARK: For debug purpose use this provider
@@ -34,8 +35,13 @@ private func JSONResponseDataFormatter(_ data: Data) -> Data {
 
 extension Resthandler: TargetType {
     
-//    public var baseURL: URL { return URL(string: "https://fierce-cove-29863.herokuapp.com")! }
-    public var baseURL: URL { return URL(string: "https://reqres.in")! }
+    public var baseURL: URL {
+        if API.type == .getArticles {
+            return URL(string: "https://fierce-cove-29863.herokuapp.com")!
+        }else {
+            return URL(string: "https://reqres.in")!
+        }
+    }
    
     public var path: String {
         switch self {
@@ -43,15 +49,16 @@ extension Resthandler: TargetType {
             return "/getAllPosts"
         case .create(_, _):
             return "/api/users"
-            
-        default:
-            return ""
+        case .getUser(let id), .update(let id, _, _), .delete(let id):
+            return "/api/users/\(id)"
+        case .getUsers:
+            return "/api/users?page=2"
         }
     }
     
     public var method: Moya.Method {
         switch self {
-        case .getArticles,.getUser:
+        case .getArticles, .getUser, .getUsers:
             return .get
         case .create:
             return .post
@@ -68,12 +75,12 @@ extension Resthandler: TargetType {
 
     public var task: Task {
         switch self {
-        case .getArticles:
+        case .getArticles, .getUser, .getUsers, .delete:
             return .requestPlain
         case let .create(name, job):
             return .requestParameters(parameters: ["name": name, "job": job], encoding: JSONEncoding.default)
-        default:
-            return .requestPlain
+        case .update( _, let name, let job):
+            return .requestParameters(parameters: ["name": name, "job": job], encoding: JSONEncoding.default)
         }
     }
     
@@ -83,7 +90,7 @@ extension Resthandler: TargetType {
     
     public var validationType: ValidationType {
         switch self {
-        case .getArticles, .create, .update, .delete, .getUser:
+        case .getArticles, .create, .update, .delete, .getUser, .getUsers:
             return .successCodes
         }
     }
